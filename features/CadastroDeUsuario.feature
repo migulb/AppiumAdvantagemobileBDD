@@ -24,11 +24,11 @@ Contexto:
   E a cidade "<Cidade>"
   E o CEP "<CEP>"
   E clico em confirmar no botão de Confirmar Cadastro
-  Então clico no menu
+  Então clico no menu "<Usuario>"
    
   Exemplos: 
   |Usuario    |Email           | Senha      |ConfirmaSenha|PrimeiroNome|UltimoNome   |Telefone     |Estado         |Endereco      |Cidade         |CEP           |
-  |Usertest124|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno        |(11)999999999|São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
+  |Usertest129|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno        |(11)999999999|São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
    
 @CadastroNegativo
 Esquema do Cenário: Cadastro Negativo
@@ -46,7 +46,7 @@ Esquema do Cenário: Cadastro Negativo
   E a cidade "<Cidade>"
   E o CEP "<CEP>" 
   E apos preencher todos os dados tento cadastrar um usuario ja existente
-  Então clico no menu
+  Então clico no menu do lado esquerdo
  Exemplos:
   |Usuario    |Email           | Senha      |ConfirmaSenha|PrimeiroNome|UltimoNome  |Telefone       |Estado         |Endereco      |Cidade         |CEP           |
   |Usertest678|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno       |(11)999999999  |São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |

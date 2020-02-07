@@ -2,6 +2,8 @@ package br.com.rsinet.hub_BDD.StepDefinition;
 
 import java.net.MalformedURLException;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import br.com.rsinet.hub_BDD.PageFactory.Cadastro_Page;
@@ -21,7 +23,6 @@ public class StepCadastro {
 	public StepCadastro(TestContext context) throws MalformedURLException {
 		testContext = context;
 		cadas = testContext.getPageFactory().getCadastro();
-		// driver = testContext.getDriverFactory().getDriver();
 	}
 
 	@Dado("^que estou na pagina inicial do app advantage$")
@@ -120,10 +121,19 @@ public class StepCadastro {
 		cadas.clicaConfirmaCadastro(driver);
 	}
 
-	@Então("^clico no menu$")
-	public void clico_no_menu() throws Throwable {
+	@Então("^clico no menu \"([^\"]*)\"$")
+	public void clico_no_menu(String arg1) throws Throwable {
 		cadas.menuFinal();
-		// DriverFactory.fecharDriver();
+		String cadastro = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
+		Assert.assertTrue(cadastro.contains(arg1));
+	}
+
+	@Então("^clico no menu do lado esquerdo$")
+	public void clico_no_menu_do_lado_esquerdo() throws Throwable {
+		cadas.menuFinal();
+		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
+		System.out.println(login);
+		Assert.assertTrue(login.contains("LOGIN"));
 	}
 
 	@E("^apos preencher todos os dados tento cadastrar um usuario ja existente$")

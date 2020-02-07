@@ -129,7 +129,7 @@ public class Cadastro_Page {
 	}
 
 	public void digitaTelefone(String tel) {
-		txt_Telefone.click();
+		wait.until(ExpectedConditions.elementToBeClickable(txt_Telefone)).click();
 		txt_Telefone.sendKeys(tel);
 
 	}
