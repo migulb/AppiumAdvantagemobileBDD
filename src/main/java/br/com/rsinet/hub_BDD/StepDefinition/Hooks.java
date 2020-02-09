@@ -13,8 +13,9 @@ public class Hooks {
 		testContext = context;
 	}
 
-	@After
+	@After(order = 0)
 	public void FinalizaTest() throws MalformedURLException {
 		testContext.getDriverFactory().fecharDriver();
+
 	}
 }

@@ -28,7 +28,7 @@ Contexto:
    
   Exemplos: 
   |Usuario    |Email           | Senha      |ConfirmaSenha|PrimeiroNome|UltimoNome   |Telefone     |Estado         |Endereco      |Cidade         |CEP           |
-  |Usertest129|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno        |(11)999999999|São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
+  |Usertest136|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno        |(11)999999999|São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
    
 @CadastroNegativo
 Esquema do Cenário: Cadastro Negativo
@@ -49,4 +49,4 @@ Esquema do Cenário: Cadastro Negativo
   Então clico no menu do lado esquerdo
  Exemplos:
   |Usuario    |Email           | Senha      |ConfirmaSenha|PrimeiroNome|UltimoNome  |Telefone       |Estado         |Endereco      |Cidade         |CEP           |
-  |Usertest678|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno       |(11)999999999  |São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
+  |Usertest136|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno       |(11)999999999  |São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |

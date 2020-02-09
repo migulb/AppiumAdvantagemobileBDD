@@ -1,6 +1,8 @@
 package br.com.rsinet.hub_BDD.StepDefinition;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import br.com.rsinet.hub_BDD.PageFactory.BuscaLupa_Page;
 import br.com.rsinet.hub_BDD.Utility.TestContext;
@@ -33,23 +35,22 @@ public class StepBuscaPelaLupa {
 		busca.digitaBusca(arg1);
 	}
 
-	@E("^aperto na lupa de pesquisa$")
+	@Então("^aperto na lupa de pesquisa$")
 	public void aperto_na_lupa_de_pesquisa() throws Throwable {
-
 		busca.lupa();
 	}
 
-	@E("^aperto no tablet desejado$")
+	@Então("^aperto no tablet desejado$")
 	public void aperto_no_tablet_desejado() throws Throwable {
-
 		busca.tablet();
+		String tablet = driver.findElement(By.id("com.Advantage.aShopping:id/textViewProductName")).getText();
+		Assert.assertTrue(tablet.contains("HP ELITE X2 1011 G1"));
 	}
 
-	@Então("^adiciono ao carrinho$")
-	public void adiciono_ao_carrinho() throws Throwable {
-
-		busca.cart();
-
+	@Então("^clico na lupa de pesquisa$")
+	public void clico_na_lupa_de_pesquisa() throws Throwable {
+		busca.lupa();
+		String erro = driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
+		Assert.assertTrue(erro.contains("No results for \"mesa\""));
 	}
-
 }

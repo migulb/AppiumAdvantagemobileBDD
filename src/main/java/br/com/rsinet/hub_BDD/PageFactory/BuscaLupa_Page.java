@@ -19,11 +19,8 @@ public class BuscaLupa_Page {
 	@FindBy(how = How.ID, using = "com.Advantage.aShopping:id/imageViewSearch")
 	private WebElement btn_lupa;
 
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]/android.widget.ImageView")
+	@FindBy(how = How.ID, using = "com.Advantage.aShopping:id/imageViewProduct")
 	private WebElement tablet;
-
-	@FindBy(how = How.ID, using = "com.Advantage.aShopping:id/buttonProductAddToCart")
-	private WebElement btn_cart;
 
 	public void digitaBusca(String busca) {
 		txt_busca.sendKeys(busca);
@@ -35,9 +32,5 @@ public class BuscaLupa_Page {
 
 	public void tablet() {
 		tablet.click();
-	}
-
-	public void cart() {
-		btn_cart.click();
 	}
 }

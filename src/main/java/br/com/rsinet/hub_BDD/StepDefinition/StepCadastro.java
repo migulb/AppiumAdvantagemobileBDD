@@ -132,7 +132,6 @@ public class StepCadastro {
 	public void clico_no_menu_do_lado_esquerdo() throws Throwable {
 		cadas.menuFinal();
 		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
-		System.out.println(login);
 		Assert.assertTrue(login.contains("LOGIN"));
 	}
 

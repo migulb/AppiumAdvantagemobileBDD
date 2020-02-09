@@ -13,7 +13,6 @@ import io.appium.java_client.android.AndroidDriver;
 public class Cadastro_Page {
 
 	private WebDriverWait wait;
-	private WebElement element;
 	private AndroidDriver<WebElement> driver;
 
 	public Cadastro_Page(AndroidDriver<WebElement> driver) {

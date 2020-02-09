@@ -2,7 +2,7 @@
 #coding: utf-8
 
 
-Funcionalidade: Cadastrar Usuario
+Funcionalidade: Busca Pela Lupa
 
 Contexto:
 
@@ -12,17 +12,16 @@ Contexto:
 	Esquema do Cenário: Busca Pela Lupa com Sucesso
 	E digito no campo de Busca "<Busca>"
 	E aperto na lupa de pesquisa
-	E aperto no tablet desejado
-	Então adiciono ao carrinho
+	Então aperto no tablet desejado
 
 	Exemplos:
-	|Busca |
-	|tablet|
+	|Busca           |
+	|HP ELITE X2 1011|
 	
   @BuscaComFalha
   Esquema do Cenário: Busca Pela Lupa com Falha
   E digito no campo de Busca "<Busca>"
-	E aperto na lupa de pesquisa
+	Então clico na lupa de pesquisa
 	
 	Exemplos:
 	|Busca|
