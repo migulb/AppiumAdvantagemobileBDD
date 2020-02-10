@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.PageFactory;
+package br.com.rsinet.hub_BDD.ScreenFactory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class BuscaLupa_Page {
+public class BuscaLupa_Screen {
 
-	public BuscaLupa_Page(AndroidDriver<WebElement> driver) {
+	public BuscaLupa_Screen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 	}
 

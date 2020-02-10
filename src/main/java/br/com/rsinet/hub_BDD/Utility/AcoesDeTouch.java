@@ -9,7 +9,7 @@ import io.appium.java_client.touch.offset.PointOption;
 public class AcoesDeTouch {
 
 	private static TouchAction actions;
-	private static AndroidDriver<WebElement> driver;
+	private AndroidDriver<WebElement> driver;
 
 	public AcoesDeTouch(AndroidDriver<WebElement> driver) {
 		this.actions = new TouchAction(driver);

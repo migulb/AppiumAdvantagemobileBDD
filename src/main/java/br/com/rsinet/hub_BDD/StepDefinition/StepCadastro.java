@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import br.com.rsinet.hub_BDD.PageFactory.Cadastro_Page;
+import br.com.rsinet.hub_BDD.ScreenFactory.Cadastro_Screen;
 import br.com.rsinet.hub_BDD.Utility.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
@@ -17,7 +17,7 @@ public class StepCadastro {
 
 	private static AndroidDriver<WebElement> driver;
 	private TestContext testContext;
-	private Cadastro_Page cadas;
+	private Cadastro_Screen cadas;
 
 	public StepCadastro(TestContext context) throws MalformedURLException {
 		testContext = context;

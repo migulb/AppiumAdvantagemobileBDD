@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import br.com.rsinet.hub_BDD.PageFactory.BuscaHome_Page;
+import br.com.rsinet.hub_BDD.ScreenFactory.BuscaHome_Screen;
 import br.com.rsinet.hub_BDD.Utility.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
@@ -18,12 +18,11 @@ public class StepBuscaHome {
 
 	private static AndroidDriver<WebElement> driver;
 	private TestContext testContext;
-	private BuscaHome_Page busca;
+	private BuscaHome_Screen busca;
 
 	public StepBuscaHome(TestContext context) throws MalformedURLException {
 		testContext = context;
 		busca = testContext.getPageFactory().getHome();
-
 		driver = testContext.getDriverFactory().getDriver();
 	}
 

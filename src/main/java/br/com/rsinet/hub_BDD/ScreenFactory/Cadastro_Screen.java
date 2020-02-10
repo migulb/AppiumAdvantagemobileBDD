@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.PageFactory;
+package br.com.rsinet.hub_BDD.ScreenFactory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,12 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import br.com.rsinet.hub_BDD.Utility.AcoesDeTouch;
 import io.appium.java_client.android.AndroidDriver;
 
-public class Cadastro_Page {
+public class Cadastro_Screen {
 
 	private WebDriverWait wait;
 	private AndroidDriver<WebElement> driver;
 
-	public Cadastro_Page(AndroidDriver<WebElement> driver) {
+	public Cadastro_Screen(AndroidDriver<WebElement> driver) {
 
 		AcoesDeTouch touch = new AcoesDeTouch(driver);
 		PageFactory.initElements(driver, this);

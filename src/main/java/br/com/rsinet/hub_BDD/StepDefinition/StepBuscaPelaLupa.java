@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import br.com.rsinet.hub_BDD.PageFactory.BuscaLupa_Page;
+import br.com.rsinet.hub_BDD.ScreenFactory.BuscaLupa_Screen;
 import br.com.rsinet.hub_BDD.Utility.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
@@ -17,7 +17,7 @@ public class StepBuscaPelaLupa {
 
 	private static AndroidDriver<WebElement> driver;
 	private TestContext testContext;
-	private BuscaLupa_Page busca;
+	private BuscaLupa_Screen busca;
 
 	public StepBuscaPelaLupa(TestContext context) throws MalformedURLException {
 

@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.PageFactory;
+package br.com.rsinet.hub_BDD.ScreenFactory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class BuscaHome_Page {
+public class BuscaHome_Screen {
 
-	public BuscaHome_Page(AndroidDriver<WebElement> driver) {
+	public BuscaHome_Screen(AndroidDriver<WebElement> driver) {
 
 		PageFactory.initElements(driver, this);
 	}

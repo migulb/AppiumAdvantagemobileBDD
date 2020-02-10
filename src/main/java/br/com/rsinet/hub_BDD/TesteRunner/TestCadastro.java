@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 		"br.com.rsinet.hub_BDD.Utility" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/CadastroUsuario.html" })
 public class TestCadastro {
-
+ 
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
