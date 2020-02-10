@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.StepDefinition;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -17,25 +19,21 @@ public class StepBuscaPelaLupa {
 	private TestContext testContext;
 	private BuscaLupa_Page busca;
 
-	public StepBuscaPelaLupa(TestContext context) {
+	public StepBuscaPelaLupa(TestContext context) throws MalformedURLException {
 
 		testContext = context;
 		busca = testContext.getPageFactory().getBusca();
-
-	}
-
-	@Dado("^que estou na pagina inicial do app$")
-	public void que_estou_na_pagina_inicial_do_app_advantage() throws Throwable {
 		driver = testContext.getDriverFactory().getDriver();
+
 	}
 
-	@E("^digito no campo de Busca \"([^\"]*)\"$")
-	public void digito_no_campo_de_Busca(String arg1) throws Throwable {
+	@Dado("^a abertura do app digito no campo de Busca \"([^\"]*)\"$")
+	public void a_abertura_do_app_digito_no_campo_de_Busca(String arg1) throws Throwable {
 
 		busca.digitaBusca(arg1);
 	}
 
-	@Então("^aperto na lupa de pesquisa$")
+	@E("^aperto na lupa de pesquisa$")
 	public void aperto_na_lupa_de_pesquisa() throws Throwable {
 		busca.lupa();
 	}

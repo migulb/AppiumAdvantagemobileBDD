@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.StepDefinition;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -18,15 +20,15 @@ public class StepBuscaHome {
 	private TestContext testContext;
 	private BuscaHome_Page busca;
 
-	public StepBuscaHome(TestContext context) {
+	public StepBuscaHome(TestContext context) throws MalformedURLException {
 		testContext = context;
 		busca = testContext.getPageFactory().getHome();
 
+		driver = testContext.getDriverFactory().getDriver();
 	}
 
 	@Dado("^que estou na Home$")
 	public void que_estou_na_Home() throws Throwable {
-		driver = testContext.getDriverFactory().getDriver();
 	}
 
 	@Quando("^clico em Headphones$")

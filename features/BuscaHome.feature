@@ -8,13 +8,13 @@ Contexto:
   Dado que estou na Home
 
   @BuscaHomeComSucesso
-	Cenário: Busca Pela Lupa com Sucesso
+	Cenário: Busca Pela Home com Sucesso
 	Quando clico em Headphones
 	Então escolho o fone HP H2310
 
 	
   @BuscaHomeComFalha
-  Esquema do Cenário: Busca Pela Lupa com Falha
+  Esquema do Cenário: Busca Pela Home com Falha
 	Quando clico no Menu 
 	E clico em login
 	E digito meu usuario e senha "<Usuario>" "<Senha>"

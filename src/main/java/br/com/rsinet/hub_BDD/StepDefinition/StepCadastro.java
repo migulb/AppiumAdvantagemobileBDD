@@ -11,7 +11,6 @@ import br.com.rsinet.hub_BDD.Utility.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
 import io.appium.java_client.android.AndroidDriver;
 
 public class StepCadastro {
@@ -23,16 +22,10 @@ public class StepCadastro {
 	public StepCadastro(TestContext context) throws MalformedURLException {
 		testContext = context;
 		cadas = testContext.getPageFactory().getCadastro();
-	}
-
-	@Dado("^que estou na pagina inicial do app advantage$")
-	public void que_estou_na_pagina_inicial_do_app_advantage() throws Throwable {
-
 		driver = testContext.getDriverFactory().getDriver();
-
 	}
 
-	@Quando("^clico no menu esquerdo$")
+	@Dado("^a abertura do appAdvantage clico no menu esquerdo$")
 	public void clico_no_menu_esquerdo() throws Throwable {
 		cadas.apertarMenu();
 	}

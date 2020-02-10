@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 
 import br.com.rsinet.hub_BDD.Utility.TestContext;
 import cucumber.api.java.After;
+import cucumber.api.java.Before;
 
 public class Hooks {
 
@@ -11,6 +12,12 @@ public class Hooks {
 
 	public Hooks(TestContext context) {
 		testContext = context;
+
+	}
+
+	@Before
+	public void aberturaDeDriver() throws MalformedURLException {
+		testContext.getDriverFactory().getDriver();
 	}
 
 	@After(order = 0)

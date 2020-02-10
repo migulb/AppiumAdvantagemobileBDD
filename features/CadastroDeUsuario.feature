@@ -5,8 +5,7 @@ Funcionalidade: Cadastrar Usuario
 
 Contexto:
 
-  Dado que estou na pagina inicial do app advantage
-  Quando clico no menu esquerdo
+  Dado a abertura do appAdvantage clico no menu esquerdo
   E clico em login e depois em SIGN UP TODAY para abrir a tela de cadastros
 
 @CadadastroPositivo
@@ -28,7 +27,7 @@ Contexto:
    
   Exemplos: 
   |Usuario    |Email           | Senha      |ConfirmaSenha|PrimeiroNome|UltimoNome   |Telefone     |Estado         |Endereco      |Cidade         |CEP           |
-  |Usertest136|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno        |(11)999999999|São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
+  |Usertest138|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno        |(11)999999999|São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
    
 @CadastroNegativo
 Esquema do Cenário: Cadastro Negativo
@@ -49,4 +48,4 @@ Esquema do Cenário: Cadastro Negativo
   Então clico no menu do lado esquerdo
  Exemplos:
   |Usuario    |Email           | Senha      |ConfirmaSenha|PrimeiroNome|UltimoNome  |Telefone       |Estado         |Endereco      |Cidade         |CEP           |
-  |Usertest136|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno       |(11)999999999  |São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
+  |Usertest138|miguel@email.com|Miguel96.   |Miguel96.    |Miguel      |Bruno       |(11)999999999  |São Paulo      |Rua Tal de Tal|Taboão da Serra|09987899      |
