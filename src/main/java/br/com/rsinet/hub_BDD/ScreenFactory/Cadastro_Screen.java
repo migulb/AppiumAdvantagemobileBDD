@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.ScreenFactory;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -14,8 +16,10 @@ public class Cadastro_Screen {
 
 	private WebDriverWait wait;
 	private AndroidDriver<WebElement> driver;
+	private AcoesDeTouch scroll;
+	private AcoesDeTouch touch;
 
-	public Cadastro_Screen(AndroidDriver<WebElement> driver) {
+	public Cadastro_Screen(AndroidDriver<WebElement> driver) throws MalformedURLException {
 
 		AcoesDeTouch touch = new AcoesDeTouch(driver);
 		PageFactory.initElements(driver, this);
@@ -154,13 +158,13 @@ public class Cadastro_Screen {
 		txt_Estado.sendKeys(estado);
 	}
 
-	public void digitarCEP(String cep) {
+	public void digitarCEP(String cep) throws MalformedURLException {
 		txt_CEP.click();
 		txt_CEP.sendKeys(cep);
 	}
 
-	public void clicaConfirmaCadastro(AndroidDriver<WebElement> driver) {
-		AcoesDeTouch.scrollAndClick(driver, "REGISTER");
+	public void clicaConfirmaCadastro(AndroidDriver<WebElement> driver) throws MalformedURLException {
+		touch.scrollAndClick(driver, "REGISTER");
 	}
 
 	public void menuFinal() {

@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.Utility;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.TouchAction;
@@ -11,8 +13,9 @@ public class AcoesDeTouch {
 	private static TouchAction actions;
 	private AndroidDriver<WebElement> driver;
 
-	public AcoesDeTouch(AndroidDriver<WebElement> driver) {
+	public AcoesDeTouch(AndroidDriver<WebElement> driver) throws MalformedURLException {
 		this.actions = new TouchAction(driver);
+
 	}
 
 	public static void arrastarTela() {

@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.Manager;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebElement;
 
 import br.com.rsinet.hub_BDD.ScreenFactory.BuscaHome_Screen;
@@ -20,13 +22,13 @@ public class PageManager {
 		this.driver = driver;
 	}
 
-	public Cadastro_Screen getCadastro() {
+	public Cadastro_Screen getCadastro() throws MalformedURLException {
 
 		return (cadas == null) ? cadas = new Cadastro_Screen(driver) : cadas;
 
 	}
 
-	public AcoesDeTouch getTouch() {
+	public AcoesDeTouch getTouch() throws MalformedURLException {
 
 		return (touch == null) ? touch = new AcoesDeTouch(driver) : touch;
 	}
