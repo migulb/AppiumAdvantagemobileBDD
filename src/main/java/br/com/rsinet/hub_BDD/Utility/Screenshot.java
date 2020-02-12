@@ -14,7 +14,7 @@ import cucumber.api.java.After;
 
 public class Screenshot {
 
-	TestContext testContext;
+	private TestContext testContext;
 
 	public Screenshot(TestContext context) {
 		testContext = context;
