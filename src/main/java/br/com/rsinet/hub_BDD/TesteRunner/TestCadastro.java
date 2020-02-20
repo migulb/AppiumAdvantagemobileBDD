@@ -13,10 +13,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "features/CadastroDeUsuario.feature", glue = { "br.com.rsinet.hub_BDD.StepDefinition",
-		"br.com.rsinet.hub_BDD.Utility" }, plugin = {
+		"br.com.rsinet.hub_BDD.Utility" }, tags = { "@CadadastroPositivo" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/CadastroUsuario.html" })
 public class TestCadastro {
- 
+
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));

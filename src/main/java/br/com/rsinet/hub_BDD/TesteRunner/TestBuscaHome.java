@@ -13,9 +13,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "features/BuscaHome.feature", glue = { "br.com.rsinet.hub_BDD.StepDefinition",
-		"br.com.rsinet.hub_BDD.Utility" }, plugin = {
+		"br.com.rsinet.hub_BDD.Utility" }, tags = { " @BuscaHomeComFalha" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/BuscaHome.html" })
 public class TestBuscaHome {
+
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));

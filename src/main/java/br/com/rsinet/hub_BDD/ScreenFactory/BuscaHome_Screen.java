@@ -14,7 +14,7 @@ public class BuscaHome_Screen {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.TextView")
+	@FindBy(how = How.XPATH, using = "//android.widget.TextView[@text='HEADPHONES']")
 	private WebElement produto;
 
 	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Headphones\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]/android.widget.ImageView")
